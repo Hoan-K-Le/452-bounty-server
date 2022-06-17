@@ -19,5 +19,7 @@ app.get('/', (req, res) => {
 	res.json({ msg: 'Welcome to the bounty API' })
 })
 
+app.use('/bounties', require('./controllers/bounty'))
+
 // listening on a port
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT} 👂`))
